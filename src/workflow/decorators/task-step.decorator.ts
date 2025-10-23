@@ -7,6 +7,9 @@ export interface TaskMeta {
   dependencies?: string[];
   retries?: number;
   timeoutMs?: number;
+  parallel?: boolean;
+  fanout?: boolean;
+  maxConcurrency?: number;
 }
 
 export function TaskStep(meta: TaskMeta) {
